@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="com.example.fhir.example"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TestIG\source\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TestIG\source\examples"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TestIG\framework"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\richard.ettema\Documents\GitHub\TestIG\source\pages"/>
+  </extension>
+  <url value="http://example.com/fhir/example/ImplementationGuide/com.example.fhir.example"/>
+  <version value="1.0.0"/>
+  <name value="ExampleIG"/>
+  <title value="Example Implementation Guide"/>
+  <status value="active"/>
+  <publisher value="AEGIS.net, Inc."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.aegis.net/index.html"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
+  <packageId value="com.example.fhir.example"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/example-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/example-humanname"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/example-patient"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="TestScript/test-example-patient"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="index.md"/>
+      <title value="Example IG Homepage"/>
+      <generation value="markdown"/>
+    </page>
+    <parameter>
+      <code value="apply"/>
+      <value value="jurisdiction"/>
+    </parameter>
+    <parameter>
+      <code value="html-template"/>
+      <value value="html-template.html"/>
+    </parameter>
+    <parameter>
+      <code value="generate"/>
+      <value value="xml"/>
+    </parameter>
+    <parameter>
+      <code value="generate"/>
+      <value value="JSON"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="example-patient"/>
+	<meta>
+		<profile value="http://example.com/fhir/example/StructureDefinition/example-patient"/>
+	</meta>
+	<name>
+		<extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+			<valueCode value="NL1"/>
+		</extension>
+		<family value="Smallberries"/>
+		<given value="Jonathon"/>
+	</name>
+</Patient>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestScript xmlns="http://hl7.org/fhir">
+	<id value="test-example-patient"/>
+	<url value="http://example.com/fhir/example/TestScript/test-example-patient"/>
+	<name value="ExampleIGTestScriptTestExamplePatientProfile"/>
+	<title value="Example IG TestScript - Test Example Patient Profile"/>
+	<status value="active"/>
+	<date value="2021-05-18"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<name value="Touchstone Support"/>
+		<telecom>
+			<system value="email"/>
+			<value value="Touchstone_Support@aegis.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="Example IG TestScript - Test Example Patient Profile - Validate a Patient fixture with slicing on HumanName Extension coded value. Expected outcome is pass, no validation errors."/>
+	<copyright value="(c) AEGIS.net, Inc. 2021"/>
+
+	<fixture id="example-patient">
+		<autocreate value="false"/>
+		<autodelete value="false"/>
+		<resource>
+			<reference value="./patient-example-patient.xml"/>
+		</resource>
+	</fixture>
+
+	<profile id="ExampleIGPatientProfile">
+		<reference value="http://example.com/fhir/example/StructureDefinition/example-patient"/>
+	</profile>
+
+	<test id="01-ValidateExtensionSliceCoded">
+		<name value="ValidateExtensionSliceCoded"/>
+		<description value="Validate a Practitioner fixture with slicing on HumanName Extension coded value. Expected outcome is pass, no validation errors."/>
+		<action>
+			<operation>
+				<type>
+					<system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+					<code value="create"/>
+				</type>
+				<description value="Create a Patient resource that declare conformance to the Example IG Patient Profile using XML format"/>
+				<accept value="xml"/>
+				<contentType value="xml"/>
+				<encodeRequestUrl value="true"/>
+				<sourceId value="example-patient"/>
+			</operation>
+		</action>
+		<action>
+			<assert>
+				<description value="Validate create Patient request payload for correct slicing on HumanName Extension coded value."/>
+				<direction value="request"/>
+				<validateProfileId value="ExampleIGPatientProfile"/>
+				<!--stopTestOnFail value="false"/-->
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+		<action>
+			<assert>
+				<description value="Confirm that the returned HTTP status is 201(Created)."/>
+				<direction value="response"/>
+				<responseCode value="201"/>
+				<!--stopTestOnFail value="false"/-->
+				<warningOnly value="false"/>
+			</assert>
+		</action>
+	</test>
+</TestScript>

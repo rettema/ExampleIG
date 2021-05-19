@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="example-patient"/>
+	<url value="http://example.com/fhir/example/StructureDefinition/example-patient"/>
+	<version value="1.0.0"/>
+	<name value="ExampleIGPatientProfile"/>
+	<title value="Example IG Patient Profile"/>
+	<status value="active"/>
+	<date value="2021-05-18"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.aegis.net"/>
+		</telecom>
+	</contact>
+	<description value="Defines constraints and extensions on the Patient resource for use in the Example IG."/>
+	<fhirVersion value="4.0.1"/>
+	<mapping>
+		<identity value="rim"/>
+		<uri value="http://hl7.org/v3"/>
+		<name value="RIM Mapping"/>
+	</mapping>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Patient"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Patient">
+			<path value="Patient"/>
+			<short value="Example IG Patient Profile"/>
+			<definition value="Defines constraints and extensions on the Patient resource for use in the Example IG."/>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Patient.name">
+			<path value="Patient.name"/>
+			<short value="NameInformation"/>
+			<type>
+				<code value="HumanName"/>
+				<profile value="http://example.com/fhir/example/StructureDefinition/example-humanname"/>
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>
+

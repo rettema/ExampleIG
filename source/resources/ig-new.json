@@ -1,0 +1,90 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "com.example.fhir.example",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TestIG\\source\\resources"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TestIG\\source\\examples"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TestIG\\framework"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "C:\\Users\\richard.ettema\\Documents\\GitHub\\TestIG\\source\\pages"
+  }],
+  "url" : "http://example.com/fhir/example/ImplementationGuide/com.example.fhir.example",
+  "version" : "1.0.0",
+  "name" : "ExampleIG",
+  "title" : "Example Implementation Guide",
+  "status" : "active",
+  "publisher" : "AEGIS.net, Inc.",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.aegis.net/index.html"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License",
+  "packageId" : "com.example.fhir.example",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1",
+  "4.0.1"],
+  "definition" : {
+    "resource" : [{
+      "reference" : {
+        "reference" : "StructureDefinition/example-patient"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/example-humanname"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/example-patient"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "TestScript/test-example-patient"
+      },
+      "exampleBoolean" : true
+    }],
+    "page" : {
+      "nameUrl" : "index.md",
+      "title" : "Example IG Homepage",
+      "generation" : "markdown"
+    },
+    "parameter" : [{
+      "code" : "apply",
+      "value" : "jurisdiction"
+    },
+    {
+      "code" : "html-template",
+      "value" : "html-template.html"
+    },
+    {
+      "code" : "generate",
+      "value" : "xml"
+    },
+    {
+      "code" : "generate",
+      "value" : "JSON"
+    }]
+  }
+}

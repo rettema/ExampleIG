@@ -1,0 +1,105 @@
+{
+  "do-transforms": "false",
+  "resources": {
+    "StructureDefinition/example-patient": {
+      "defns": "StructureDefinition-example-patient-definitions.html",
+      "base": "StructureDefinition-example-patient.html",
+      "source": "structuredefinition-example-patient.xml"
+    },
+    "StructureDefinition/example-humanname": {
+      "defns": "StructureDefinition-example-humanname-definitions.html",
+      "base": "StructureDefinition-example-humanname.html",
+      "source": "structuredefinition-example-humanname.xml"
+    },
+    "Patient/example-patient": {
+      "base": "Patient-example-patient.html",
+      "source": "patient-example-patient.xml"
+    },
+    "TestScript/test-example-patient": {
+      "base": "TestScript-test-example-patient.html",
+      "source": "testscript-test-example-patient.xml"
+    }
+  },
+  "source": "ig.xml",
+  "topofpage": "true",
+  "jurisdiction": "US",
+  "allviews": "true",
+  "fixed-business-version": "1.0.0",
+  "title": "Example Implementation Guide",
+  "npm-name": "com.example.fhir.example",
+  "igtemplate-dir": "C:/Users/richard.ettema/Documents/GitHub/TestIG/",
+  "canonicalBase": "http://example.com/fhir/example",
+  "name": "Example IG",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "html-template": "html-template.html",
+  "license": "CC0-1.0",
+  "version": "4.0.1",
+  "logging": [
+    "progress"
+  ],
+  "tool": "jekyll",
+  "special-urls": [
+    "urn:oid:2.16.840.1.113883.6.238"
+  ],
+  "pub_url": "richard.ettema@aegis.net",
+  "broken-links": "warning",
+  "extraTemplates": [
+    "mappings"
+  ],
+  "publisher": "AEGIS.net, Inc.",
+  "no-inactive-codes": "false",
+  "defaults": {
+    "CodeSystem": {
+      "template-base": "base.html"
+    },
+    "OperationDefinition": {
+      "template-base": "base.html"
+    },
+    "SearchParameter": {
+      "template-base": "base.html"
+    },
+    "StructureDefinition": {
+      "template-mappings": "sd-mappings.html",
+      "template-base": "sd.html",
+      "template-defns": "sd-definitions.html"
+    },
+    "TestScript": {
+      "template-base": "ex.html"
+    },
+    "ValueSet": {
+      "template-base": "base.html"
+    },
+    "Any": {
+      "template-base": "base.html",
+      "swagger": "true",
+      "template-format": "format.html"
+    }
+  },
+  "paths": {
+    "pages": [
+      "framework",
+      "source/pages"
+    ],
+    "specification": "http://hl7.org/fhir/R4",
+    "output": "output",
+    "qa": "generated_output/qa",
+    "txCache": "generated_output/txCache",
+    "temp": "generated_output/temp",
+    "resources": [
+      "source/resources",
+      "source/examples"
+    ]
+  },
+  "working-dir": "C:/Users/richard.ettema/Documents/GitHub/TestIG/",
+  "status": "active",
+  "swagger": [
+    {
+      "mode": "single",
+      "capabilities": "server"
+    }
+  ],
+  "mappings": "true",
+  "spreadsheets": [
+  ],
+  "gen-examples": "false"
+}

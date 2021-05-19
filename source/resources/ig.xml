@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Hidden IG for de facto IG publishing-->
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+	<id value="com.example.fhir.example"/>
+	<url value="http://example.com/fhir/example/ImplementationGuide/com.example.fhir.example"/>
+	<version value="1.0.0"/>
+	<name value="ExampleIG"/>
+	<title value="Example Implementation Guide"/>
+	<status value="active"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<!-- 0..* ContactDetail Contact details for the publisher -->
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.aegis.net/index.html"/>
+		</telecom>
+	</contact>
+	<copyright value="Used by permission of AEGIS.net, Inc., all rights reserved Creative Commons License"/>
+	<!-- 0..1 Use and/or publishing restrictions -->
+	<packageId value="com.example.fhir.example"/>
+	<!-- 0..1 NPM Package name for IG -->
+	<license value="CC0-1.0"/>
+	<!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
+	<fhirVersion value="4.0.1"/>
+	<!-- 0..1 FHIR Version this Implementation Guide targets -->
+	<definition>
+		<!--  <grouping> -->
+		<!-- 0..* Grouping used to present related resources in the IG -->
+		<!--   <name value="[string]"/> -->
+		<!-- 1..1 Descriptive name for the package -->
+		<!--   <description value="[string]"/> -->
+		<!-- 0..1 Human readable text describing the package -->
+		<!-- </grouping> -->
+		<!-- <resource><reference><reference value="[type]/[id]"/></reference><name value="Test Example"/><description value="A test example to show how a implementation guide works"/><exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/></resource>   -->
+		<!-- insert resources -->
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/example-patient"/></reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/example-humanname"/></reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Patient/example-patient"/></reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="TestScript/test-example-patient"/></reference>
+			<exampleBoolean value="true"/>
+		</resource>
+		<page>
+			<nameUrl value="index.md"/>
+			<title value="Example IG Homepage"/>
+			<generation value="markdown"/>
+		</page>
+	</definition>
+</ImplementationGuide>

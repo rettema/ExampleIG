@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="example-humanname"/>
+	<url value="http://example.com/fhir/example/StructureDefinition/example-humanname"/>
+	<version value="1.0.0"/>
+	<name value="ExampleIGHumanNameProfile"/>
+	<title value="Example IG HumanName Profile"/>
+	<status value="active"/>
+	<date value="2021-05-18"/>
+	<publisher value="AEGIS.net, Inc."/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.aegis.net"/>
+		</telecom>
+	</contact>
+	<description value="Defines constraints and extensions on the HumanName data type for use in the Example IG."/>
+	<fhirVersion value="4.0.1"/>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<type value="HumanName"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/HumanName"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="HumanName">
+			<path value="HumanName"/>
+			<short value="Example IG HumanName Profile"/>
+			<definition value="Defines constraints and extensions on the HumanName data type for use in the Example IG."/>
+			<comment value="Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely."/>
+			<min value="0"/>
+			<max value="*"/>
+			<mapping>
+				<identity value="v2"/>
+				<map value="XPN"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="EN (actually, PN)"/>
+			</mapping>
+			<mapping>
+				<identity value="servd"/>
+				<map value="ProviderName"/>
+			</mapping>
+		</element>
+		<element id="HumanName.extension">
+			<path value="HumanName.extension"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
+		</element>
+		<element id="HumanName.extension:humannameAssemblyOrder">
+			<path value="HumanName.extension"/>
+			<sliceName value="humannameAssemblyOrder"/>
+			<type>
+				<code value="Extension"/>
+				<profile value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="Human Name Assembly Order"/>
+				<valueSet value="http://hl7.org/fhir/ValueSet/name-assembly-order"/>
+			</binding>
+		</element>
+	</differential>
+</StructureDefinition>
+
